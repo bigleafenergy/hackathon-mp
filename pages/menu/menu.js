@@ -27,27 +27,31 @@ Page({
       }, (err) => {
           console.log("err", err)
       }
-    );
+    )
 
-    console.log(self.data.meals)
+  },
 
-  // createOrder: function(e){
-  //   console.log("orders", e)
-  //   let order = new wx.BaaS.TableObject('hackathon_orders')
-  //   let newOrder = order.create()
-  //   newOrder.set({
-  //     meal_id: e.currentTarget.dataset.meal_id,
-  //     count: 1
-  //   })
+  createOrder: function(e) {
+    console.log("orders", e)
+    let order = new wx.BaaS.TableObject('hackathon_orders')
+    let newOrder = order.create()
+    newOrder.set({
+      meal_id: e.currentTarget.dataset.meal_id,
+      count: 1
+    })
 
-  //   newOrder.save().then((res)=>{
-  //     wx.showToast({
-  //       title: 'Ordered!',
-  //     })
-  //   }),
-  //   console.log("afterOrder", this.data.meals)
-  // }
-
-
+    newOrder.save().then((res)=>{
+      wx.showToast({
+        title: 'Ordered!',
+      })
+    }),
+    console.log("afterOrder", this.data.meals)
+  },
+  
+  navigateToConfirm: function (){
+    wx.navigateTo({
+      url: '/pages/confirmation/confirmation',
+    })
   }
+
 })

@@ -1,14 +1,72 @@
 /* pages/menu/menu.wxss */
 .card {
 display: flex;
-height: 150px;
-width: 100vw;
+flex-direction: row;
+justify-content: space-between;
+height: 120px;
+width: 350px;
 margin-left: 19px;
+margin-right: 19px;
+margin-top: 10px;
 }
 image{
 
   height: 100px;
   width: 100px;
+}
+
+.button{
+  height: 30px; 
+  width: 30px; 
+  border-radius: 50%;
+  background-color:#000; 
+  color: #fff; 
+  display: absolute;
+  bottom: 100px;
+}
+
+.mealInfo {
+  margin: 10 px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+
+}
+
+.mealName{
+  font-size: 20px;
+  font-family: PingFang SC;
+  font-weight: 500;
+}
+
+.price{
+  font-size: 20px;
+  font-family: PingFang SC;
+  font-weight: 200;
+}
+
+.orderBar {
+  display: flex;
+  flex-flow: row;
+  margin: 0 10px;
+  padding: 0 20px;
+  justify-content: space-between;
+  height: 40px;
+  width: 100vw;
+  background-color:#000; 
+  color: #fff; 
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px #666666
+}
+
+.orderButton {
+  padding: 0 20px;
+  height: 40px;
+  width: 80px;
+  background-color:#fff; 
+  color: #000; 
+  border-radius: 15px;
+
 }
 
 .restInfo {

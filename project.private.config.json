@@ -13,6 +13,12 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/confirmation/confirmation",
+          "pathName": "pages/confirmation/confirmation",
+          "query": "",
+          "scene": null
+        },
+        {
           "name": "pages/menu/menu",
           "pathName": "pages/menu/menu",
           "query": "",
