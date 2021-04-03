@@ -7,13 +7,11 @@ Page({
    */
   data: {
     mealsordered: [],
-    orders: [],
+    meals: [],
   },
 
   confirm() {
     // wx:for="{{mealsordered}}" wx:for-item="meal"
-
-
     wx.showModal({
       title: 'Order Confirmation',
       content: 'Total Cost: ' ,
@@ -33,20 +31,45 @@ Page({
    */
   onLoad: function (options) {
     const self = this
-    let mealsordered = new wx.BaaS.TableObject('hackathon_meals')
-    console.log(mealsordered)
-    mealsordered.find().then(
+    let mealsordered = new wx.BaaS.TableObject('hackathon_orders')
+    let Meals = new wx.BaaS.TableObject('hackathon_meals')
+    console.log ("page options", options)
+    Meals.expand('meal_id').find().then(
       (res) => {
-        console.log('res', res)
+        console.log('meals', res)
         self.setData({
-          mealsordered: res.data.objects
+          meals: res.data.objects
         })
       }, (err) => {
           console.log("err", err)
       }
     );
 
-    console.log(self.data.mealsordered)
+    // console.log("page options", options)
+    // mealsordered.find().then(
+    //   (res) => {
+    //     console.log('res', res)
+    //     self.setData({
+    //       mealsordered: res.data.objects
+    //     })
+    //   }, (err) => {
+    //       console.log("err", err)
+    //   }
+    // );
+
+    // console.log(self.data.mealsordered)
+
+    // mealsordered.forEach(function(item, index){
+    //   console.log(item); 
+    //   console.log(index); 
+    // })
+    // for (order in mealsordered) {
+    //   let orderID = order.meal_id,
+    //   for (meal in meals) {
+    //     if orderID == meal.id,
+    //   },
+    // }
+
 
   },
 
