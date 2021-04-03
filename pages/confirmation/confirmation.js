@@ -1,17 +1,34 @@
 // pages/confirmation/confirmation.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    mealsordered: [],
+    orders: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const self = this
+    let mealsordered = new wx.BaaS.TableObject('hackathon_meals')
+    console.log(mealsordered)
+    mealsordered.find().then(
+      (res) => {
+        console.log('res', res)
+        self.setData({
+          mealsordered: res.data.objects
+        })
+      }, (err) => {
+          console.log("err", err)
+      }
+    );
+
+    console.log(self.data.mealsordered)
 
   },
 

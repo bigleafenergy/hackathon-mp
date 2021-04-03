@@ -1,7 +1,11 @@
 {
   "pages":[
+<<<<<<< HEAD
     "pages/confirmation/confirmation",
+=======
+>>>>>>> 508101cab76daf985a746ddaf57b51a03150cbce
     "pages/index/index",
+    "pages/confirmation/confirmation",
     "pages/menu/menu",
     "pages/logs/logs"
   ],

@@ -25,9 +25,20 @@
           "scene": null
         },
         {
+<<<<<<< HEAD
           "name": "pages/index/index",
           "pathName": "pages/index/index",
           "query": "",
+=======
+          "name": "pages/confirmation/confirmation",
+          "pathName": "pages/confirmation/confirmation",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+>>>>>>> 508101cab76daf985a746ddaf57b51a03150cbce
           "scene": null
         }
       ]
