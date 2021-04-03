@@ -1,0 +1,53 @@
+/* pages/menu/menu.wxss */
+.card {
+display: flex;
+height: 150px;
+width: 100vw;
+margin-left: 19px;
+}
+image{
+
+  height: 100px;
+  width: 100px;
+}
+
+.restInfo {
+  position: sticky top;
+  width: 400px;
+  height: 80px;
+  background: #FFFFFF;
+  box-shadow: -2px 1px 12px 0px rgba(204, 204, 204, 0.51);
+  border-radius: 12px 12px 0px 0px;
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.restImg {
+  margin-left: 19px;
+  width: 52px;
+  height: 52px;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+
+.restName {
+  margin-top: 5px;
+  margin-left: 15px;
+  /* width: 414px;
+  height: 160px; */
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.restLoc {
+  margin-top: 5px;
+  margin-left: 15px;
+  /* align-items: baseline; */
+  align-content: space-around;
+  width: 137px;
+  height: 13px;
+  font-size: 14px;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
