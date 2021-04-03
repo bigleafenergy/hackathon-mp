@@ -1,0 +1,19 @@
+<!--pages/confirmation/confirmation.wxml-->
+<view class="restInfo">
+  <image src="https://cloud-minapp-39661.cloud.ifanrusercontent.com/1lSZkQUBrryoCX4A.jpeg" class="restImg"></image>
+  <view>
+    <view class="restName">TiMoAn Restaurant</view>
+    <view class="restLoc">this is our location</view>
+  </view>
+</view>
+
+<view class="orderDetail">
+
+  <form bindcon="confirmOrder">
+
+
+
+
+  </form>
+  <view><button type="primary" form-type="submit" bindtap="orderSuccess">Confirm</button></view>
+</view>

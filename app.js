@@ -21,5 +21,7 @@ App({
 
   globalData: {
     userInfo: wx.getStorageSync('userInfo')
+
+
   }
 })
