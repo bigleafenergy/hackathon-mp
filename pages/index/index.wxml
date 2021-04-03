@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="background">
-  <view class="allOfIt">
+  <view class="all">
     <view class="header">TiMoAn Restaurant</view>
     <view class="subheader">A unique restaurant made during a hackathon that's kind of working but not really working~</view>
     <button style="border-radius: 50px;" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Order Now</button>
