@@ -19,6 +19,12 @@
           "scene": null
         },
         {
+          "name": "pages/confirmation/confirmation",
+          "pathName": "pages/confirmation/confirmation",
+          "query": "",
+          "scene": null
+        },
+        {
           "name": "pages/index/index",
           "pathName": "pages/index/index",
           "scene": null
