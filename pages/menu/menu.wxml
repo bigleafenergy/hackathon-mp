@@ -11,13 +11,15 @@
   <image src="{{meals.pictureURL}}" mode="aspectFill" ></image>
     <view class="mealInfo">
       <view class= "mealName"> {{meals.nameOfFood}}</view>
-      <view class="price">  ¥{{meals.costOfFood}}</view>
+      <view class="mealDescription"> {{meals.descriptionOfFood}} </view>
+      <view class="price"> ¥{{meals.costOfFood}}</view>
     </view> 
 
-  <view class="button mealName" bindtap="createOrder"data-meal_id = "{{meals.id}}" > + </view>
+  <view class="button mealName" bindtap="createOrder" bindtap="handleTap" data-operation="{{meals.costOfFood}}" data-price="{{meals.costOfFood}}" data-meal_id = "{{meals.id}}" > + </view>
 </view>
 
 <view class="orderBar">
-  <view class="totalPrice"> $</view>
+  <view wx:if= "{{add>0}}" class="totalPrice"> ¥ {{add}} </view>
+  <view wx:else class="totalPrice"> ¥ 0 </view>
   <view class="orderButton" bindtap="navigateToConfirm" > Order </view>
 </view>

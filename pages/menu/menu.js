@@ -8,6 +8,8 @@ Page({
   data: {
 
    meals:[],
+   price: [],
+   add: null,
 
   },
 
@@ -47,7 +49,17 @@ Page({
     }),
     console.log("afterOrder", this.data.meals)
   },
-  
+
+  handleTap: function(e) {
+    console.log("price", e)
+this.setData({
+  price: e.currentTarget.dataset.price,
+  add: e.target.dataset.operation,
+})
+
+console.log("total price", this.data.add)
+  },
+
   navigateToConfirm: function (){
     wx.navigateTo({
       url: '/pages/confirmation/confirmation',
