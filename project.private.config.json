@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -12,8 +13,21 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/confirmation/confirmation",
+          "pathName": "pages/confirmation/confirmation",
+          "query": "",
+          "scene": null
+        },
+        {
           "name": "pages/menu/menu",
           "pathName": "pages/menu/menu",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
           "scene": null
         }
       ]

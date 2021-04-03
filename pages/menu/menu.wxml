@@ -9,7 +9,15 @@
 
 <view class="card" wx:for="{{meals}}" wx:for-item="meals" >
   <image src="{{meals.pictureURL}}" mode="aspectFill" ></image>
-  {{meals.nameOfFood}} ¥{{meals.costOfFood}}
-<button type="primary" style= "height: 40px; width: 10px; background-color:#000; color: #fff; text-align: center;" bindtap="createOrder"data-meal_id = "{{meals.id}}" > + </button>
+    <view class="mealInfo">
+      <view class= "mealName"> {{meals.nameOfFood}}</view>
+      <view class="price">  ¥{{meals.costOfFood}}</view>
+    </view> 
 
+  <view class="button mealName" bindtap="createOrder"data-meal_id = "{{meals.id}}" > + </view>
+</view>
+
+<view class="orderBar">
+  <view class="totalPrice"> $</view>
+  <view class="orderButton" bindtap="navigateToConfirm" > Order </view>
 </view>
