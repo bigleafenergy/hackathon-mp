@@ -1,0 +1,15 @@
+<!--pages/menu/menu.wxml-->
+<view class="restInfo">
+  <image src="https://cloud-minapp-39661.cloud.ifanrusercontent.com/1lSZkQUBrryoCX4A.jpeg" class="restImg"></image>
+  <view>
+    <view class="restName">TiMoAn Restaurant</view>
+    <view class="restLoc">this is our location</view>
+  </view>
+</view>
+
+<view class="card" wx:for="{{meals}}" wx:for-item="meals" >
+  <image src="{{meals.pictureURL}}" mode="aspectFill" ></image>
+  {{meals.nameOfFood}} ¥{{meals.costOfFood}}
+<button type="primary" style= "height: 40px; width: 10px; background-color:#000; color: #fff; text-align: center;" bindtap="createOrder"data-meal_id = "{{meals.id}}" > + </button>
+
+</view>
