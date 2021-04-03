@@ -8,6 +8,7 @@ App({
      wx.requestPayment)
 
     wx.BaaS.init('a3fb2113c0a97830d15b')
+    
     const self = this
     wx.BaaS.auth.getCurrentUser().then((res)=>{
       wx.setStorageSync('userInfo', res)
