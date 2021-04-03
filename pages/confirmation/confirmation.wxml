@@ -8,12 +8,44 @@
 </view>
 
 <view class="orderDetail">
+  <view class="orderTitle">My order</view>
+  <!-- <form bindcon="confirmOrder">
+  </form> -->
 
-  <form bindcon="confirmOrder">
+  <view class = "cards" wx:for="{{mealsordered}}" wx:for-item="meal">
+      <navigator class="nav">
+          <view class="card mealpic">
+              <image src="{{meal.pictureURL}}" mode="aspectFill"></image>
+          </view>
+          
+          <view class="card mealdetail">
+              <view class="mealname">{{meal.nameOfFood}}</view>
+              <view class="mealprice">￥{{meal.costOfFood}}</view>
 
+              <!-- <view class="mealnum">Count: {{meal.count}}</view> -->
+              <view class="mealnum">Count: 100</view>
 
+              <!-- <view class="card-content">{{story.content}}</view> -->
+              
+              <!-- <view class="card-bottom">
+                  <view>
+                      <image src="../pageimage/see.png"></image>
+                      <text>1234</text>
+                  </view>
+                  <view>
+                      <image src="../pageimage/comment.png"></image>
+                      <text>50</text>
+                  </view>
+                  <view>
+                      <image src="../pageimage/like.png"></image>
+                      <text>670</text>
+                  </view>
+              </view> -->
+          </view>
 
+      </navigator>
+      <view class="space"></view>
+  </view>
 
-  </form>
   <view><button type="primary" form-type="submit" bindtap="orderSuccess">Confirm</button></view>
 </view>
