@@ -16,12 +16,9 @@ App({
       },(err)=>{console.log('err', err)}
     )
 
-  
   },
 
   globalData: {
     userInfo: wx.getStorageSync('userInfo')
-
-
   }
 })

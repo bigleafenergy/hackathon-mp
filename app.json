@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/confirmation/confirmation",
     "pages/index/index",
+    "pages/confirmation/confirmation",
     "pages/menu/menu",
     "pages/logs/logs"
   ],
