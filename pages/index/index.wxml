@@ -2,5 +2,5 @@
 <view class="background">
   <view class="header">TiMoAn Restaurant</view>
   <view class="subheader">A unique restaurant made during a hackathon that's kind of working but not really working~</view>
-  <button type="default" class="enterbutton">Order Now</button>
+  <button type="primary" class="enterbutton" bindtap="onGotUserInfo">Order Now</button>
 </view>
