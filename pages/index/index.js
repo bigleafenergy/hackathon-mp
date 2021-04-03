@@ -14,23 +14,50 @@ Page({
     console.log(3333)
   },
 
-  onGotUserInfo: function(e) {
+  userInfoHandler: function(userInfo) {
+    const self = this
+    wx.BaaS.auth.loginWithWechat(userInfo).then(
+      (res) => {
+        console.log('res',res)
+        self.setData({
+            currentUser: res
+        })
+        wx.setStorageSync('userInfo', res)
+      }, (err) => {
+        console.log('err',err)
+      }
+    )
     wx.navigateTo({
       url: '/pages/menu/menu',
     })
-    wx.getUserInfo({
-      lang: en,
-    })
-    this.setData({
-    })
-  },
+  }
 
-  bindTap: function (e) {
-    console.log(e)
-    // wx.navigateTo({
-    //   url: 'pages/menu/menu',
-    // });
-  },
+  // onGotUserInfo: function(e) {
+  //   wx.navigateTo({
+  //     url: '/pages/menu/menu',
+  //   })}
+  //   userInfoHandler: functio (userInfo) {
+  //     const self = this
+  //     wx.BaaS.auth.loginWithWechat(userInfo).then(
+  //       (res) => {
+  //         console.log('res',res)
+  //         self.setData({
+  //             currentUser: res
+  //         })
+  //         wx.setStorageSync('userInfo', res)
+  //       }, (err) => {
+  //         console.log('err',err)
+  //       }
+  //     )
+  //   }
+  // },
+
+  // bindTap: function (e) {
+  //   console.log(e)
+  //   // wx.navigateTo({
+  //   //   url: 'pages/menu/menu',
+  //   // });
+  // },
 
   // getUserProfile: fucntion(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
