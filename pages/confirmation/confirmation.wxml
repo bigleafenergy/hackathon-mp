@@ -12,18 +12,19 @@
   <!-- <form bindcon="confirmOrder">
   </form> -->
 
-  <view class = "cards" wx:for="{{mealsordered}}" wx:for-item="meal">
+  <view class = "cards" wx:for="{{meals}}" wx:for-item="order">
       <navigator class="nav">
           <view class="card mealpic">
-              <image src="{{meal.pictureURL}}" mode="aspectFill"></image>
+
+              <image src="{{order.pictureURL}}" mode="aspectFill"></image>
           </view>
           
           <view class="card mealdetail">
-              <view class="mealname">{{meal.nameOfFood}}</view>
-              <view class="mealprice">￥{{meal.costOfFood}}</view>
+              <view class="mealname">{{order.nameOfFood}}</view>
+              <view class="mealprice">￥{{order.costOfFood}}</view>
 
               <!-- <view class="mealnum">Count: {{meal.count}}</view> -->
-              <view class="mealnum">Count: 100</view>
+              <!-- <view class="mealnum">Count: {{order.count}}</view> -->
 
               <!-- <view class="card-content">{{story.content}}</view> -->
               
