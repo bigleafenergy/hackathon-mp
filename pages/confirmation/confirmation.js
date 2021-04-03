@@ -10,6 +10,24 @@ Page({
     orders: [],
   },
 
+  confirm() {
+    // wx:for="{{mealsordered}}" wx:for-item="meal"
+
+
+    wx.showModal({
+      title: 'Order Confirmation',
+      content: 'Total Cost: ' ,
+      success: function(res) {
+        if(res.confirm) {
+          console.log('用户点击了确定')
+        } else if(res.cancel) {
+          console.log('用户点击了取消')
+        }
+      }
+    })
+  },
+
+
   /**
    * 生命周期函数--监听页面加载
    */

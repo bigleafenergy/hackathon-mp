@@ -47,5 +47,6 @@
       <view class="space"></view>
   </view>
 
-  <view><button type="primary" form-type="submit" bindtap="orderSuccess">Confirm</button></view>
+  <!-- <view><button type="primary" form-type="submit" bindtap="orderSuccess">Confirm</button></view> -->
+  <view><button type="primary" size="mini" bindtap="confirm">Confirm</button></view>
 </view>
