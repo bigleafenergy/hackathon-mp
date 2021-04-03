@@ -1,5 +1,6 @@
 {
   "pages":[
+
     "pages/index/index",
     "pages/confirmation/confirmation",
     "pages/menu/menu",
